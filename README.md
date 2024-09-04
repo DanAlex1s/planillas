@@ -32,7 +32,7 @@ El proyecto pone en práctica principios de desarrollo de software, integrando t
 
 1. **Clonar el Repositorio:**
    ```bash
-   git clone git@github.com:Drz17/EvidentProject.git
+   git clone git@github.com:DanAlex1s/planillas.git
    ```
 2. **Configurar el Archivo .env:**
    - Copia el archivo `.env.example` y renómbralo a `.env`.
@@ -42,7 +42,7 @@ El proyecto pone en práctica principios de desarrollo de software, integrando t
      DB_CONNECTION=mysql
      DB_HOST=db
      DB_PORT=3306
-     DB_DATABASE=laravel
+     DB_DATABASE=planilla
      DB_USERNAME=root
      DB_PASSWORD=db_data_123
      ```
@@ -52,12 +52,13 @@ El proyecto pone en práctica principios de desarrollo de software, integrando t
    docker-compose up -d --build
    ```
 
-4. **Migrar la Base de Datos:**
-   ```bash
-   docker-compose exec app php artisan migrate
-   ```
+4. **Generar la Clave de Laravel:**
+   - Ejecuta el siguiente comando para generar la clave de Laravel:
+     ```bash
+     docker-compose exec app php artisan key:generate
+     ```
 
-4. **Acceder a la Aplicación:**
+5. **Acceder a la Aplicación:**
    - La aplicación estará disponible en `http://localhost:8040`.
    - Para acceder a la consola de Laravel, ejecuta:
      ```bash
