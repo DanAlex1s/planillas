@@ -1,0 +1,35 @@
+version: "3.7"
+name: planilla
+services:
+    db:
+        image: mariadb:10.5.8
+        container_name: planilla_db
+        environment:
+            MYSQL_DATABASE: planilla
+            MYSQL_ROOT_PASSWORD: db_data_123
+            MYSQL_ROOT_USER: root
+
+    adminer:
+        container_name: planilla_adminer
+        image: adminer
+        restart: always
+        ports:
+            - "8030:8080"
+
+    app:
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        container_name: planilla_app
+        working_dir: /var/www/
+        volumes:
+            - ./:/var/www
+
+    nginx:
+        image: nginx:1.25-alpine
+        container_name: planilla_nginx
+        ports:
+            - "8040:80"
+        volumes:
+            - ./:/var/www
+            - ./nginx:/etc/nginx/conf.d
