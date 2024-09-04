@@ -40,5 +40,3 @@ RUN chown -R www-data:www-data /var/www
 
 # Run composer install
 RUN composer install
-
-RUN php artisan key:generate
