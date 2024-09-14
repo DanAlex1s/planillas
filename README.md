@@ -15,6 +15,7 @@ El proyecto pone en práctica principios de desarrollo de software, integrando t
 1. **Docker Desktop**
     - Utilizado para ejecutar el entorno de Laravel en contenedores.
     - [Descargar Docker Desktop](https://www.docker.com/products/docker-desktop).
+    - Si no funciona la opcion anterior descargalo de esta pagina: https://docs.docker.com/desktop/install/windows-install/
     - Verifica la instalación ejecutando:
       ```bash
       docker --version
