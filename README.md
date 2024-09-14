@@ -42,7 +42,7 @@ El proyecto pone en práctica principios de desarrollo de software, integrando t
      DB_CONNECTION=mysql
      DB_HOST=db
      DB_PORT=3306
-     DB_DATABASE=planilla
+     DB_DATABASE=planilla_app
      DB_USERNAME=root
      DB_PASSWORD=db_data_123
      ```
